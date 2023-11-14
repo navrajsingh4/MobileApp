@@ -1,16 +1,16 @@
 import {  StyleSheet,Text, Pressable, SafeAreaView, ScrollView, View } from "react-native";
 
 import React from 'react';
-export default function ToDoList({tasks}){
+export default function ToDoList({tasks}) {
     return(
         <SafeAreaView>
             <ScrollView>
-            {tasks.map((tasks, index) => (
-                <Pressable>
-                    <View key={tasks.index} style={[styles.task, styles.completed]}>
-                        <Text style={styles.taskText}>{tasks}</Text>
-                    </View> 
-                </Pressable>
+                {tasks.map((task, index) => (
+                    <Pressable key={index}>
+                        <View style={[styles.task, styles.completed]}>
+                            <Text style={styles.taskText}>{task}</Text>
+                        </View> 
+                    </Pressable>
                 ))}
             </ScrollView>
         </SafeAreaView>

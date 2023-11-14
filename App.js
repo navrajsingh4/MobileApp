@@ -14,11 +14,14 @@ export default function App() {
         'Do laundry',
         'Go to gym',
         'Walk dog'
-      ])
+      ]);
+    const addTask = (task) => {
+        setTasks([...tasks, task]);
+    };
     return (
         <View>
         <ToDoList tasks={tasks}/>
-        <ToDoForm />
+        <ToDoForm addTask={addTask} />
         </View>
     );
 }
